@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Exemplo com Vue</title>
+</head>
+
+<body>
+	<div id="app">
+		<form @submit="adicionarAlimento" style="display: flex">
+			<div>
+				<p>Nome do alimento</p>
+				<input type="text" name="nome">
+            </div>
+				<div>
+					<p>Quantidade</p>
+					<input type="text" name="quantidade">
+            </div>
+					<div>
+						<button>Salvar</button>
+					</div>
+		</form>
+        
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="/app.js"></script>
+</body>
+
+</html>
