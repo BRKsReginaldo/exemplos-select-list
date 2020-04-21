@@ -18,7 +18,7 @@
 
 <body>
 <div id="app">
-  <form @submit="adicionarAlimento" style="display: flex" v-cloak>
+  <form id="form-salvar-alimento" style="display: flex">
     <div>
       <p>Nome do alimento</p>
       <input type="text" name="nome">
@@ -28,27 +28,20 @@
       <input type="text" name="quantidade">
     </div>
     <div>
-      <button class="save-button">Salvar</button>
+      <button type="submit" class="save-button">Salvar</button>
     </div>
   </form>
 
-  <div v-show="!!alimentos.length" v-cloak>
+  <div style="display: none" id="lista-alimentos-container">
     <h1>Lista</h1>
-    <div>
-      <div style="display: flex" v-for="alimento in alimentos">
-        <div>{{ alimento.nome }}</div>
-        <div style="margin-left: 20px">{{ alimento.quantidade }}</div>
-      </div>
-    </div>
+    <div id="lista-alimentos"></div>
 
     <div>
-      <button style="margin-top: 30px" @click="salvarAlimentos">Salvar</button>
+      <button style="margin-top: 30px" id="botao-salvar">Salvar</button>
     </div>
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="/app.js"></script>
 </body>
-
 </html>
